@@ -4,15 +4,7 @@ FROM node:latest
 WORKDIR /usr/src/app
 
 USER root
-const Vulnerability1 = (req, res) => {
-    exec(
-        'gzip ' + req.query.file_path,
-        function (err, data) {
-            console.log('err: ', err)
-            console.log('data: ', data);
-        });
-        res.send('Hello World!')
-}
+
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
